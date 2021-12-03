@@ -75,7 +75,8 @@ For more experimentation, refer - https://eth.wiki/json-rpc/API
 - Create a new helloWorld.sol file with below content
 
 ```
-pragma solidity >=0.5.0 <0.7.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
 
 contract HelloWorld {
     function get() public pure returns (string memory){
@@ -88,9 +89,11 @@ contract HelloWorld {
 
 - Select environment as Web3 provider
 
-- Select the account from which you want to pay for the transaction fees
+- Select the account that has ether to pay the gas fees
 
-- Unlock the account, use 
+![img.png](select-account-to-pay-gas.png)
+
+- Unlock the account, using the following curl
 
 ```
 curl --location --request POST 'http://localhost:8545' \

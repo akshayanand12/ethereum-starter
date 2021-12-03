@@ -89,9 +89,11 @@ contract HelloWorld {
 
 - Select environment as Web3 provider
 
-- Select the account from which you want to pay for the transaction fees
+- Select the account that has ether to pay the gas fees
 
-- Unlock the account, use 
+![img.png](select-account-to-pay-gas.png)
+
+- Unlock the account, using the following curl
 
 ```
 curl --location --request POST 'http://localhost:8545' \

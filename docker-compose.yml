@@ -56,6 +56,18 @@ services:
     networks:
       priv-eth-net:
 
+  explorer:
+    hostname: explorer
+    image: alethio/ethereum-lite-explorer
+    depends_on:
+      - geth-bootnode
+    environment:
+      - APP_NODE_URL=http://localhost:8545
+    ports:
+      - "8080:80"
+    networks:
+      priv-eth-net:
+
 networks:
   priv-eth-net:
     driver: bridge

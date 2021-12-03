@@ -65,6 +65,24 @@ curl --location --request POST 'http://localhost:8545' \
 }'
 ```
 
+- Send ether to the new account
+```
+curl --location --request POST 'localhost:8545' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "jsonrpc": "2.0",
+    "id": 3,
+    "method": "eth_sendTransaction",
+    "params": [
+        {
+            "from": "<source account>",
+            "to": "<destination account",
+            "value": "0xf123"
+        }
+    ]
+}'
+```
+
 For more experimentation, refer - https://eth.wiki/json-rpc/API
 
 ---
